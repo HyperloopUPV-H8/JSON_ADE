@@ -1,0 +1,31 @@
+#######
+v0
+NOT INTENDED FOR PARSING,
+just the transitions and some general remarks
+any transition that is not present is IMPOSSIBLE and illegal
+#######
+
+
+##
+##  note that the conditions for transitioning into FAULT are not yet defined
+
+TRANSITIONS:
+        ["CONNECTING","OPERATIONAL"],
+            socket_connected
+        ["CONNECTING","FAULT"],
+        ["OPERATIONAL","FAULT"],
+        ["IDLE","ACCELERATING"],  
+            GUI_command      
+        ["ACCELERATING","REGENERATIVE_BRAKING"],
+            GUI_command
+        ["ACCELERATING","BRAKING"],
+            GUI_command
+        ["ACCELERATING","FAULT"],
+        ["ACCELERATING","IDLE"],
+            GUI_command
+        ["REGENERATIVE_BRAKING","FAULT"],
+        ["REGENERATIVE_BRAKING","IDLE"],
+            GUI_command
+        ["BRAKING","FAULT"],
+        ["BRAKING","IDLE"]
+            GUI_command

@@ -1,0 +1,35 @@
+{
+
+    "states":[
+        "CONNECTING",
+        "OPERATIONAL",
+        "IDLE",
+        "MOTOR_ACTIVE",
+        "ACCELERATING",
+        "REGENERATIVE_BRAKING",
+        "BRAKING",
+        "FAULT"
+    ],
+    "state_machines":[
+        ["GENERAL","CONNECTING","OPERATIONAL","FAULT"],
+        ["OPERATIONAL","IDLE","MOTOR_ACTIVE"],
+        ["MOTOR_ACTIVE","ACCELERATING","BRAKING","REGENERATIVE_BRAKING"]
+    ],
+    "transitions":[
+
+        ["CONNECTING","OPERATIONAL"],
+        ["CONNECTING","FAULT"],
+        ["OPERATIONAL","FAULT"],
+        ["IDLE","ACCELERATING"],        
+        ["ACCELERATING","REGENERATIVE_BRAKING"],
+        ["ACCELERATING","BRAKING"],
+        ["ACCELERATING","FAULT"],
+        ["ACCELERATING","IDLE"],
+        ["REGENERATIVE_BRAKING","FAULT"],
+        ["REGENERATIVE_BRAKING","IDLE"],
+        ["BRAKING","FAULT"],
+        ["BRAKING","IDLE"]
+    ]
+
+
+}
