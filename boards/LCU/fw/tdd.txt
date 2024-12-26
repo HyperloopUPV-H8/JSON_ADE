@@ -1,0 +1,34 @@
+#######
+v0
+NOT INTENDED FOR PARSING,
+just the transitions and some general remarks
+any transition that is not present is IMPOSSIBLE and illegal
+#######
+
+
+##
+##  note that the conditions for transitioning into FAULT are not yet defined
+## TESTING STATE is used to bypass most of the protections and validation of 
+## LDUs & LPUs
+
+TRANSITIONS:
+        ["INITIAL","CONNECTING"],
+            the two mcus are communicating via SPI
+        ["INITIAL","FAULT"],
+        ["CONNECTING","FAULT"],
+        ["CONNECTING","OPERATIONAL"],
+            socket_connected
+        ["IDLE","LEVITATION"],
+            GUI_command
+        ["IDLE","STICK_DOWN"],
+            GUI_command
+        ["IDLE","FAULT"],
+        ["LEVITATION","FAULT"],
+        ["STICK_DOWN","FAULT"],
+        ["TESTING","FAULT"],
+        ["TESTING","IDLE"],
+            GUI_command
+        ["LEVITATION","IDLE"],
+            GUI_command
+        ["IDLE","TESTING"]
+            GUI_command

@@ -4,5 +4,7 @@
     "measurements": ["LCU_measurements.json"],
     "packets": [
         "packets.json"
-    ]
+    ],
+    "firmware": ["fw/tdd.json"]
+
 }

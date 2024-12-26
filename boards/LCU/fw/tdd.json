@@ -1,0 +1,33 @@
+{
+    "states":[
+        "INITIAL",
+        "SYNCED",
+        "CONNECTING",
+        "OPERATIONAL",
+        "IDLE",
+        "TESTING",
+        "LEVITATION",
+        "STICK_DOWN",
+        "FAULT"
+    ],
+    "state_machines":[
+        ["GENERAL","INITIAL","CONNECTING","OPERATIONAL","FAULT"],
+        ["OPERATIONAL","IDLE","TESTING","LEVITATION","STICK_DOWN"]
+    ],
+    "transitions":[
+        ["INITIAL","CONNECTING"],
+        ["INITIAL","FAULT"],
+        ["CONNECTING","FAULT"],
+        ["CONNECTING","OPERATIONAL"],
+        ["IDLE","LEVITATION"],
+        ["IDLE","STICK_DOWN"],
+        ["IDLE","FAULT"],
+        ["LEVITATION","FAULT"],
+        ["STICK_DOWN","FAULT"],
+        ["TESTING","FAULT"],
+        ["TESTING","IDLE"],
+        ["LEVITATION","IDLE"],
+        ["IDLE","TESTING"]
+    ]
+
+}
