@@ -1,0 +1,27 @@
+{
+    "states":[
+        "CONNECTING",
+        "OPERATIONAL",
+        "IDLE",
+        "PRECHARGE",
+        "HIGH_VOLTAGE",
+        "CHARGING",
+        "FAULT"
+    ],
+    "state_machines":[
+        ["GENERAL","CONNECTING","OPERATIONAL","FAULT"],
+        ["OPERATIONAL","IDLE","PRECHARGE","HIGH_VOLTAGE","CHARGING"]
+    ],
+    "transitions":[
+        ["CONNECTING","FAULT"],
+        ["CONNECTING","OPERATIONAL"],
+        ["IDLE","PRECHARGE"],
+        ["IDLE","FAULT"],
+        ["IDLE","CHARGING"],
+        ["PRECHARGE","HIGH_VOLTAGE"],
+        ["PRECHARGE","FAULT"],
+        ["HIGH_VOLTAGE","FAULT"],
+        ["HIGH_VOLTAGE","IDLE"]
+    ]
+
+}

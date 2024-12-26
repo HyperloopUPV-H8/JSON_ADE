@@ -9,5 +9,6 @@
         "batteries_packets.json",
         "control_packets.json",
         "orders.json"
-    ]
+    ],
+    "firmware": ["fw/tdd.json"]
 }

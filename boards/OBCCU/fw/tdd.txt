@@ -1,0 +1,26 @@
+#######
+v0
+NOT INTENDED FOR PARSING,
+just the transitions and some general remarks
+any transition that is not present is IMPOSSIBLE and illegal
+#######
+
+
+##
+##  note that the conditions for transitioning into FAULT are not yet defined
+TRANSITIONS:
+        ["CONNECTING","FAULT"], 
+
+        ["CONNECTING","OPERATIONAL"],
+            socket_connected
+        ["IDLE","PRECHARGE"],
+            gui_command
+        ["IDLE","FAULT"],
+        ["IDLE","CHARGING"],
+            gui_command
+        ["PRECHARGE","HIGH_VOLTAGE"],
+            automatic_transition from precharge
+        ["PRECHARGE","FAULT"],
+        ["HIGH_VOLTAGE","FAULT"],
+        ["HIGH_VOLTAGE","IDLE"],
+            gui_command
