@@ -4,10 +4,16 @@
         "TCP_SERVER": 50500,
         "UDP": 50400,
         "SNTP": 123,
-        "TFTP": 69
+        "TFTP": 69,
+	"Test": "Test" 
     },
     "addresses": {
+<<<<<<< Updated upstream
         "backend": "192.168.0.9"
+=======
+        "backend": "127.0.0.1",
+	"Test": 127.0.0.2
+>>>>>>> Stashed changes
     },
     "units": {
         "V": "*1",
@@ -23,16 +29,24 @@
         "G": "*9.8",
         "rad": "*1",
         "km/h": "*3.6",
-        "mrad": "/1000"
+        "mrad": "/1000",
+	"Test": 1
     },
     "message_ids": {
         "info": 1,
         "fault": 2,
         "warning": 3,
         "blcu_ack": 4,
+<<<<<<< Updated upstream
         "add_state_order": 5,
         "remove_state_order": 6,
         "state_space": 7
+=======
+        "add_state_orders": 5,
+        "remove_state_orders": 6,
+        "state_space": 7,
+	"test":"1"
+>>>>>>> Stashed changes
     }
 }
 

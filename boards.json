@@ -2,6 +2,8 @@
     "boards": {
         "OBCCU": "boards/OBCCU/OBCCU.json",
         "VCU": "boards/VCU/VCU.json",
-        "LCU": "boards/LCU/LCU.json"
+        "LCU": "boards/LCU/LCU.json",
+    	"Test":"boards/test/test.json",
+        "Test":"boards/error/error.json" 
     }
 }

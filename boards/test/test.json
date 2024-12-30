@@ -1,0 +1,10 @@
+{
+	"measurements":[
+		"measTest.json",
+		"error.json"
+	],
+	"packets": [
+		"packetTest.json",
+		"error.json"
+	]
+}

@@ -13,7 +13,7 @@
             "id": "bpu_sector",
             "name": "BPU Sector",
             "type": "enum(1,2,BOTH)",
-            "nodUnits": "",
+            "podUnits": "",
             "displayUnits": ""
             
             
